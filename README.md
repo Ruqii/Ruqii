@@ -48,10 +48,10 @@ Almost everything below is me answering the same question in a different domain:
 | Repo | Task |
 | :--- | :--- |
 | [cuad-multi-model](https://github.com/Ruqii/cuad-multi-model) | Legal contract clause extraction (CUAD) |
-| [vendor-payout-multi-model](https://github.com/Ruqii/vendor-payout-multi-model) | Debugging a real payout bug |
-| [mbti-multi-model](https://github.com/Ruqii/mbti-multi-model) | 32-question questionnaire — do models answer consistently? |
-| [worldcup-multi-model](https://github.com/Ruqii/worldcup-multi-model) | Constraint solving over match schedules |
-| [agents-in-situationship-multi-model](https://github.com/Ruqii/agents-in-situationship-multi-model) | Attachment-style quiz, across models |
+| [vendor-payout-multi-model](https://github.com/Ruqii/vendor-payout-multi-model) | Three models against the same payout-pipeline debugging task |
+| [mbti-multi-model](https://github.com/Ruqii/mbti-multi-model) | The same 32-question MBTI questionnaire, several models |
+| [worldcup-multi-model](https://github.com/Ruqii/worldcup-multi-model) | One solver across every World Cup match board |
+| [agents-in-situationship-multi-model](https://github.com/Ruqii/agents-in-situationship-multi-model) | A 20-scenario dating quiz, across models |
 
 </details>
 
@@ -62,10 +62,10 @@ Almost everything below is me answering the same question in a different domain:
 | Repo | Baseline |
 | :--- | :--- |
 | [trapstreet-solutions](https://github.com/Ruqii/trapstreet-solutions) | Reference implementations across tasks |
-| [cuad-baseline](https://github.com/Ruqii/cuad-baseline) | Deterministic extraction, no LLM |
-| [python-deterministic](https://github.com/Ruqii/python-deterministic) | Pure-Python timezone scheduler |
-| [identify-the-animal-vlm-baseline](https://github.com/Ruqii/identify-the-animal-vlm-baseline) | VLM species identification |
-| [minecraft-obtain-diamond](https://github.com/Ruqii/minecraft-obtain-diamond) | An agent plays Minecraft for a diamond |
+| [cuad-baseline](https://github.com/Ruqii/cuad-baseline) | The floor every model solution should beat |
+| [python-deterministic](https://github.com/Ruqii/python-deterministic) | Regex + zoneinfo, no LLM — cross-timezone scheduler |
+| [identify-the-animal-vlm-baseline](https://github.com/Ruqii/identify-the-animal-vlm-baseline) | Serengeti camera-trap species ID, with a VLM |
+| [mindcraft-forMC](https://github.com/Ruqii/mindcraft-forMC) | Reference agents for the Minecraft diamond task |
 
 </details>
 
