@@ -24,64 +24,84 @@ Every number on a board is a real run, not a claim.
 
 ### 🧱 The platform — [`@trapstreet`](https://github.com/trapstreet)
 
-| Repo | What it is |
-| :--- | :--- |
-| **[trap](https://github.com/trapstreet/trap)** &nbsp;<img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white"> | `tp` — score any agent, skill, model or script against an eval task, then submit it to a public leaderboard |
-| **[trapstreet-tasks](https://github.com/trapstreet/trapstreet-tasks)** &nbsp;<img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white"> | Open evaluation tasks — inputs, expected outputs, and a judge |
-| **[trapstreet-skills](https://github.com/trapstreet/trapstreet-skills)** &nbsp;<img src="https://img.shields.io/badge/-Agent%20Skills-D97757?style=flat-square"> | Set up the CLI, build a solution against a task, or author a new task |
-| **[dsh-trapstreet](https://github.com/trapstreet/dsh-trapstreet)** &nbsp;<img src="https://img.shields.io/badge/-npm-CB3837?style=flat-square&logo=npm&logoColor=white"> | Check which DeepSeek Harness plugins actually loaded, and look up public boards |
+<table>
+<tr><td width="34%">
+
+**[trap](https://github.com/trapstreet/trap)**
+
+<img src="https://img.shields.io/pypi/v/trap-cli?label=trap-cli&color=3776AB&logo=pypi&logoColor=white"> <img src="https://img.shields.io/github/license/trapstreet/trap?color=blue">
+
+</td><td>
+
+`tp` — the CLI. Runs your solution as a subprocess with one env var, captures what it writes, scores it through a judge and grader, then submits the run to a board. Your code never imports it or knows it exists.
+
+</td></tr>
+<tr><td>
+
+**[trapstreet-tasks](https://github.com/trapstreet/trapstreet-tasks)**
+
+<img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/github/license/trapstreet/trapstreet-tasks?color=blue">
+
+</td><td>
+
+The open tasks themselves — inputs, expected outputs, and a judge. Legal contract extraction, debugging a payout pipeline, camera-trap species ID, an agent playing Minecraft for a diamond.
+
+</td></tr>
+<tr><td>
+
+**[trapstreet-skills](https://github.com/trapstreet/trapstreet-skills)**
+
+<img src="https://img.shields.io/github/stars/trapstreet/trapstreet-skills?style=flat-square&color=D97757"> <img src="https://img.shields.io/github/license/trapstreet/trapstreet-skills?color=blue">
+
+</td><td>
+
+Agent skills, so your coding agent can do the setup for you — install the CLI, build a solution against a task, or author a new task.
+
+</td></tr>
+<tr><td>
+
+**[dsh-trapstreet](https://github.com/trapstreet/dsh-trapstreet)**
+
+<img src="https://img.shields.io/npm/v/@trapstreet/dsh-trapstreet?color=CB3837&logo=npm&logoColor=white"> <img src="https://img.shields.io/github/license/trapstreet/dsh-trapstreet?color=blue">
+
+</td><td>
+
+A DeepSeek Harness plugin — check which plugins actually loaded, and look up public boards without leaving your session.
+
+</td></tr>
+</table>
+
+<br>
+
+### ⚡ Try it
+
+Point your coding agent at it — installs into Claude Code, Cursor, Codex, Cline, Amp, Antigravity and 70+ more:
 
 ```bash
 npx skills add trapstreet/trapstreet-skills
 ```
 
-<br>
+Then just say:
 
-### 🔬 Evaluation work, in the open
-
-Almost everything below is me answering the same question in a different domain: *given one task, how differently do models and scaffolds actually behave?*
+| Say this | What happens |
+| :--- | :--- |
+| *"set up trapstreet"* | Installs and authorizes the `tp` CLI. One time — local scoring needs no account. |
+| *"build a solution for &lt;task&gt;"* | Writes `trap.yaml` and the solver, runs it locally, submits when you're happy. From scratch, around code you have, or by adapting someone else's repo. |
+| *"make a task that evaluates &lt;X&gt;"* | Interviews you on what counts as correct and where ground truth comes from, writes the judge and grader, then calibrates until the scores mean something. |
 
 <details>
-<summary><b>Multi-model comparisons</b> — same task, several models, one scoreboard</summary>
+<summary><b>Prefer the CLI directly?</b></summary>
 <br>
 
-| Repo | Task |
-| :--- | :--- |
-| [cuad-multi-model](https://github.com/Ruqii/cuad-multi-model) | Legal contract clause extraction (CUAD) |
-| [vendor-payout-multi-model](https://github.com/Ruqii/vendor-payout-multi-model) | Three models against the same payout-pipeline debugging task |
-| [mbti-multi-model](https://github.com/Ruqii/mbti-multi-model) | The same 32-question MBTI questionnaire, several models |
-| [worldcup-multi-model](https://github.com/Ruqii/worldcup-multi-model) | One solver across every World Cup match board |
-| [agents-in-situationship-multi-model](https://github.com/Ruqii/agents-in-situationship-multi-model) | A 20-scenario dating quiz, across models |
+```bash
+uv tool install trap-cli   # the command is `tp`
+tp auth login              # authorize this machine, once
+tp run && tp submit        # from any directory with a trap.yaml
+```
 
 </details>
 
-<details>
-<summary><b>Baselines</b> — the honest floor a fancy agent has to beat</summary>
-<br>
-
-| Repo | Baseline |
-| :--- | :--- |
-| [trapstreet-solutions](https://github.com/Ruqii/trapstreet-solutions) | Reference implementations across tasks |
-| [cuad-baseline](https://github.com/Ruqii/cuad-baseline) | The floor every model solution should beat |
-| [python-deterministic](https://github.com/Ruqii/python-deterministic) | Regex + zoneinfo, no LLM — cross-timezone scheduler |
-| [identify-the-animal-vlm-baseline](https://github.com/Ruqii/identify-the-animal-vlm-baseline) | Serengeti camera-trap species ID, with a VLM |
-| [mindcraft-forMC](https://github.com/Ruqii/mindcraft-forMC) | Reference agents for the Minecraft diamond task |
-
-</details>
-
-<details>
-<summary><b>Agent skills & tooling</b> — things I built because I needed them</summary>
-<br>
-
-| Repo | What it does |
-| :--- | :--- |
-| [obsidian-cli-skill](https://github.com/Ruqii/obsidian-cli-skill) | Automate an Obsidian vault from the terminal |
-| [llm-wiki-skills](https://github.com/Ruqii/llm-wiki-skills) | Ingest, query and lint a personal LLM wiki |
-| [MergeNarrator](https://github.com/Ruqii/MergeNarrator) | Merged PR → analysis → review → post |
-| [skill-distill](https://github.com/Ruqii/skill-distill) | Measure whether a community code-review skill helps |
-| [ad-pipeline](https://github.com/Ruqii/ad-pipeline) | URL → brand DNA → strategy → copy → images |
-
-</details>
+Tasks live in their author's own repository, not mine — publish from anywhere public and register it on the site.
 
 <br>
 
@@ -99,15 +119,6 @@ Almost everything below is me answering the same question in a different domain:
   <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white">
   <img alt="Claude" src="https://img.shields.io/badge/Claude-D97757?style=flat&logo=claude&logoColor=white">
 </p>
-
-<br>
-
-### 📊 Languages
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Ruqii&theme=github_dark">
-  <img alt="Top languages" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Ruqii&theme=github">
-</picture>
 
 <br>
 
