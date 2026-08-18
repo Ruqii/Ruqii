@@ -32,7 +32,7 @@ Every number on a board is a real run, not a claim.
 | **[dsh-trapstreet](https://github.com/trapstreet/dsh-trapstreet)** &nbsp;<img src="https://img.shields.io/badge/-npm-CB3837?style=flat-square&logo=npm&logoColor=white"> | Check which DeepSeek Harness plugins actually loaded, and look up public boards |
 
 ```bash
-uv tool install trap-cli && tp auth login
+npx skills add trapstreet/trapstreet-skills
 ```
 
 <br>
