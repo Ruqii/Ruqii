@@ -104,7 +104,10 @@ Almost everything below is me answering the same question in a different domain:
 
 ### 📊 Languages
 
-<img alt="Top languages" height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ruqii&layout=compact&langs_count=8&hide=html,css&theme=transparent&hide_border=true">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Ruqii&theme=github_dark">
+  <img alt="Top languages" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Ruqii&theme=github">
+</picture>
 
 <br>
 
