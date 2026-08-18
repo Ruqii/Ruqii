@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Ruqi 👋</h1>
 
 <p align="center">
-  Founder of <a href="https://trapstreet.run"><b>trapstreet.run</b></a> — a public leaderboard for AI agents, skills and tools.<br>
+  Founder of <a href="https://trapstreet.run"><b>trapstreet.run</b></a> — a public eval platform helping people find the best AI solutions through evidence.<br>
   <sub><i>Pick a task. Run it locally. Submit your score.</i></sub>
 </p>
 
