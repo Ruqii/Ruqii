@@ -105,6 +105,21 @@ Tasks live in their author's own repository, not mine — publish from anywhere 
 
 <br>
 
+### 🍻 OpenSourceIRL
+
+I co-host [**OpenSourceIRL**](https://lu.ma/opensourceirl) — open-source drinks in London, with [OpenCues](https://opencues.com). No talks, no set demos, no badges. Bring a laptop if you want to show something; nobody minds if you don't.
+
+| | | |
+| :--- | :--- | :--- |
+| [**v1.2.0**](https://luma.com/cy8qk6qo) | 31 Jul 2026 · London · 92 guests | with Supabase |
+| [**v1.0.0**](https://luma.com/0u58v2hk) | 10 Jul 2026 · Soho, London · 79 guests | with Shipyard |
+
+Also co-hosted [**Monologue #3 — Coding Harness**](https://luma.com/gy3qsj8i) (12 Jun 2026, Shoreditch, 35 guests) — a session on agentic dev environments, eval frameworks and orchestration patterns, with [Monologue AI+HCI](https://luma.com/gy3qsj8i).
+
+<sub>Next one goes out on the [OpenSourceIRL calendar](https://lu.ma/opensourceirl) — subscribe there.</sub>
+
+<br>
+
 ### 🧰 Stack
 
 <p>
